@@ -1,0 +1,22 @@
+{
+  "name": "bs-date-fns",
+  "version": "0.1.0",
+  "main": "lib/js/src/DateFns.js",
+  "author": "Matt Revell <mattrevell82@me.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "run:js": "nodemon lib/js/src/example.js",
+    "clean": "bsb -clean-world",
+    "prepublish": "yarn run clean && yarn run build"
+  },
+  "keywords": [
+    "BuckleScript", "date-fns", "date", "reasonml"
+  ],
+  "devDependencies": {
+    "bs-platform": "1.9.3",
+    "nodemon": "^1.12.1",
+    "date-fns": "^1.28.5" 
+  }
+}
