@@ -7,16 +7,18 @@
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
-    "run:js": "nodemon lib/js/src/example.js",
+    "run:js": "node src/example.bs.js",
     "clean": "bsb -clean-world",
-    "prepublish": "yarn run clean && yarn run build"
+    "prepublish": "npm run clean && npm run build"
   },
   "keywords": [
-    "BuckleScript", "date-fns", "date", "reasonml"
+    "BuckleScript",
+    "date-fns",
+    "date",
+    "reasonml"
   ],
   "devDependencies": {
-    "bs-platform": "1.9.3",
-    "nodemon": "^1.12.1",
-    "date-fns": "^1.28.5" 
+    "bs-platform": "2.1.0",
+    "date-fns": "1.28.5"
   }
 }
