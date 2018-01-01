@@ -4,10 +4,6 @@
 var DateFns    = require("date-fns");
 var Pervasives = require("bs-platform/lib/js/pervasives.js");
 
-var date1 = new Date();
-
-var formattedDate = DateFns.format(date1, "DD/MM/YYYY");
-
 var firstDate = new Date("01/01/2000");
 
 var secondDate = new Date("01/02/2000");
@@ -22,21 +18,37 @@ var dates = /* array */[
   fourthDate
 ];
 
-var idx = DateFns.closestIndexTo(firstDate, dates);
+var idx = DateFns.closestIndexTo(/* `Date */[
+      758940238,
+      firstDate
+    ], /* `Dates */[
+      -407535003,
+      dates
+    ]);
 
 console.log(Pervasives.string_of_int(idx));
 
-var res = DateFns.closestTo(firstDate, dates);
+console.log(firstDate);
+
+console.log(dates);
+
+var res = DateFns.closestTo(/* `Date */[
+      758940238,
+      firstDate
+    ], /* `Dates */[
+      -407535003,
+      dates
+    ]);
+
+console.log(res);
 
 console.log(DateFns.format(res, "DD/MM/YYYY"));
 
-exports.date1         = date1;
-exports.formattedDate = formattedDate;
-exports.firstDate     = firstDate;
-exports.secondDate    = secondDate;
-exports.thirdDate     = thirdDate;
-exports.fourthDate    = fourthDate;
-exports.dates         = dates;
-exports.idx           = idx;
-exports.res           = res;
-/* date1 Not a pure module */
+exports.firstDate  = firstDate;
+exports.secondDate = secondDate;
+exports.thirdDate  = thirdDate;
+exports.fourthDate = fourthDate;
+exports.dates      = dates;
+exports.idx        = idx;
+exports.res        = res;
+/* firstDate Not a pure module */

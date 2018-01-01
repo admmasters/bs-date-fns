@@ -7,9 +7,8 @@
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
-    "run:js": "node src/example.bs.js",
-    "clean": "bsb -clean-world",
-    "prepublish": "npm run clean && npm run build"
+    "example": "node src/example.bs.js",
+    "clean": "bsb -clean-world"
   },
   "keywords": [
     "BuckleScript",
