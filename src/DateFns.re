@@ -15,14 +15,23 @@ external closestTo :
     [@bs.unwrap] [ | `Date(jsDate) | `String(string) | `Int(int)],
     [@bs.unwrap] [ | `Dates(jsDates) | `Strings(strings) | `Ints(ints)]
   ) =>
-  int =
+  jsDate =
   "closestTo";
 
 [@bs.module "date-fns"]
 external compareAsc :
   (
     [@bs.unwrap] [ | `Date(jsDate) | `String(string) | `Int(int)],
-    [@bs.unwrap] [ | `Dates(jsDates) | `Strings(strings) | `Ints(ints)]
+    [@bs.unwrap] [ | `Date(jsDate) | `String(string) | `Int(int)]
   ) =>
   int =
   "compareAsc";
+
+[@bs.module "date-fns"]
+external compareDesc :
+  (
+    [@bs.unwrap] [ | `Date(jsDate) | `String(string) | `Int(int)],
+    [@bs.unwrap] [ | `Date(jsDate) | `String(string) | `Int(int)]
+  ) =>
+  int =
+  "compareDesc";

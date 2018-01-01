@@ -17,3 +17,9 @@ let closestTo = DateFns.closestTo(`Date(date1), `Dates(dates));
 Js.log(closestTo);
 
 let compareAsc = DateFns.compareAsc(`Date(date1), `Date(date2));
+
+Js.log(compareAsc);
+
+let compareDesc = DateFns.compareDesc(`Date(date1), `Date(date2));
+
+Js.log(compareDesc);
