@@ -13,15 +13,15 @@ type _ints = array(int);
   | `Numbers(_ints)
 ] => int = "";
 
-[@bs.module "date-fns"] [@bs.val] external closestTo : [@bs.unwrap] [
-  | `Date(_date)
+[@bs.module "date-fns"] [@bs.val] external closestTo : ([@bs.unwrap] [
+  | `Date(Js_date.t)
   | `String(string)
   | `Number(int)
-] => [@bs.unwrap] [
-  | `Dates(_dates)
-  | `Strings(_strings)
-  | `Numbers(_ints)
-] => _date = "";
+]) => ([@bs.unwrap] [
+  | `Dates(array(Js_date.t))
+  | `Strings(array(string))
+  | `Numbers(array(int))
+]) => _date = "";
 
 [@bs.module "date-fns"] external format: Js_date.t => string = "format";
 [@bs.module "date-fns"] external format2: Js_date.t => string => string = "format";

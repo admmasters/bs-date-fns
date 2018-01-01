@@ -32,13 +32,7 @@ console.log(firstDate);
 
 console.log(dates);
 
-var res = DateFns.closestTo(/* `Date */[
-      758940238,
-      firstDate
-    ], /* `Dates */[
-      -407535003,
-      dates
-    ]);
+var res = DateFns.closestTo(firstDate, dates);
 
 console.log(res);
 
