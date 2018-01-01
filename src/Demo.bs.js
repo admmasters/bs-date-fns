@@ -22,10 +22,13 @@ var closestTo = DateFns.closestTo(date1, dates);
 
 console.log(closestTo);
 
+var compareAsc = DateFns.closestTo(date1, date2);
+
 exports.date1          = date1;
 exports.date2          = date2;
 exports.date3          = date3;
 exports.dates          = dates;
 exports.closestIndexTo = closestIndexTo;
 exports.closestTo      = closestTo;
+exports.compareAsc     = compareAsc;
 /* date1 Not a pure module */
