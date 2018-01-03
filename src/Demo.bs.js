@@ -30,6 +30,10 @@ var compareDesc = DateFns.compareDesc(date1, date2);
 
 console.log(compareDesc);
 
+var distance = DateFns.distanceInWords(date1, date2, {
+      includeSeconds: true
+    });
+
 exports.date1          = date1;
 exports.date2          = date2;
 exports.date3          = date3;
@@ -38,4 +42,5 @@ exports.closestIndexTo = closestIndexTo;
 exports.closestTo      = closestTo;
 exports.compareAsc     = compareAsc;
 exports.compareDesc    = compareDesc;
+exports.distance       = distance;
 /* date1 Not a pure module */
